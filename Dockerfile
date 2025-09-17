@@ -1,9 +1,10 @@
 FROM node
+
 ENV MONGO_DB_USERNAME=admin \
     MONGO_DB_PWD=qwerty
 
-RUN mkdir -p testapp
+WORKDIR /testapp
 
-COPY . /testapp
+COPY . .
 
-CMD ["node","/nodeja-apna-college/server.js"]
+CMD ["node", "server.js"]
