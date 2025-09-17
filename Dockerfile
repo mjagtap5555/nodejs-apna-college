@@ -7,4 +7,7 @@ WORKDIR /testapp
 
 COPY . .
 
+# 👇 This is what's missing
+RUN npm install
+
 CMD ["node", "server.js"]
